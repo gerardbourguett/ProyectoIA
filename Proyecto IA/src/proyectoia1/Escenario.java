@@ -1,4 +1,3 @@
-
 package proyectoia1;
 
 import java.awt.Graphics;
@@ -15,13 +14,16 @@ public class Escenario extends JComponent implements Constantes {
     c = new Celda[NUMERO_CELDAS_ALTO][NUMERO_CELDAS_ANCHO];
 	for(int i=0; i<NUMERO_CELDAS_ALTO;i++) {
 		for(int j=0; j<NUMERO_CELDAS_ANCHO; j++) {
-		c[i][j] = new Celda(j*TAMAÑO_CELDA,i*TAMAÑO_CELDA);
+		c[i][j] = new Celda(j*TAMAÃ‘O_CELDA,i*TAMAÃ‘O_CELDA);
 			//c[i][j] = new Celda(i*ALTO_VENTANA,j*ANCHO_VENTANA);
 			//if(filaJugador>Nu)
 		}
 	}
 	c[this.filaJugador][this.columnaJugador].cambiarTipo(TIPO_JUGADOR);
-	c[4][4].cambiarTipo(TIPO_ESCENARIO);		
+        
+	c[4][4].cambiarTipo(TIPO_ENEMIGO);
+        c[6][2].cambiarTipo(TIPO_RECOMPENSA);
+        c[3][7].cambiarTipo(TIPO_PARED);
 			
          
      }

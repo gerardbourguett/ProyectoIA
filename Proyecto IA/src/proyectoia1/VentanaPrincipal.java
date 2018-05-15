@@ -1,5 +1,3 @@
-
-
 package proyectoia1;
 
 
@@ -13,6 +11,8 @@ public class VentanaPrincipal extends JFrame implements Constantes{
     public VentanaPrincipal(){
     super(TITULO_APP);
     this.setSize(ANCHO_VENTANA, ALTO_VENTANA);
+    this.setLocationRelativeTo(null);
+    this.setResizable(false);
     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     Lienzo l = new Lienzo();
     Container cp = this.getContentPane();
